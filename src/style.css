@@ -1,3 +1,83 @@
-body {
-    background-color: bisque;
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Balsamiq Sans', sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
+body{
+    width: 70%;
+    margin: auto;
+}
+
+h1{
+    margin-left: 100px;
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container{
+    display: flex;
+    gap: 200px;
+}
+
+.refresh-btn{
+    padding: 0 10px;
+    border: 2px solid;
+    box-shadow: 3px 3px black;
+}
+.scores {
+    width: 95%;
+    margin-left: 150px;
+    margin-top: 20px;
+}
+.scores-container{
+  border: 2px #000 solid;
+  margin: 20px auto;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 10px;
+}
+
+li:nth-child(odd){
+    background: rgb(161, 159, 159);
+}
+
+.form-title {
+    margin-top: 20px;
+}
+
+form{
+    margin-top: 20px;
+    display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+input {
+    border: 2px #000 solid;
+    padding: 5px;
+    width: 100%;
+  }
+  ::placeholder {
+    color: #000;
+  }
+
+  .submit-btn {
+    padding: 0.15rem 1rem;
+  align-self: flex-end;
+  border: 2px solid;
+  box-shadow: 3px 3px black;
+  }
