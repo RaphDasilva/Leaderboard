@@ -1,33 +1,35 @@
 import { inputName, inputScore, gameScoreContainer } from './const.js';
-import addScore from './add-score.js';
+import addApiScore from './add-score.js';
 import getScore from './get-score.js';
 
-const arrScore = [];
+let scoreArr = [];
 
-const mainAddscore = () => {
-  let user = {};
-  user.name = inputName.value;
-  user.score = inputScore.value;
-  addScore.push(user);
-  addScore(user);
+const addScore = () => {
+  const users = {};
+  users.user = inputName.value;
+  users.score = inputScore.value;
+  scoreArr.push(users);
+  addApiScore(users);
   inputName.value = '';
   inputScore.value = '';
-}
+};
 
-const mainGetScore = () => {
+const renderScore = () => {
     gameScoreContainer.innerHTML = '';
-    arrScore.forEach(element => {
-        const person = `<li>${element.name}: ${element.score}</li>`;
-        gameScoreContainer.innerHTML += person;
-        inputName.value = '';
-        inputScore.value = '';
-    });
-}
+  scoreArr.forEach((person) => {
+    const leader = `<li> ${person.user}: ${person.score}</li>`;
+    gameScoreContainer.innerHTML += leader;
+    inputName.value = '';
+    inputScore.value = '';
+  });
+};
 
 const refreshScore = async () => {
-   const arr = await getScore();
-   arrScore = await arr;
-   mainGetScore();
-}
+  const arr = await getScore();
+  scoreArr = await arr;
+  renderScore();
+};
 
-export {mainAddscore, mainGetScore, refreshScore};
+export {
+  renderScore, addScore, refreshScore,
+};
