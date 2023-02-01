@@ -15,7 +15,7 @@ const addScore = () => {
 };
 
 const renderScore = () => {
-    gameScoreContainer.innerHTML = '';
+  gameScoreContainer.innerHTML = '';
   scoreArr.forEach((person) => {
     const leader = `<li> ${person.user}: ${person.score}</li>`;
     gameScoreContainer.innerHTML += leader;

@@ -1,26 +1,23 @@
 import './style.css';
-import { addScore, refreshScore, } from './modules/main-functions';
-import { refreshBtn,submitScore, inputName, inputScore } from './modules/const';
-
-
-
+import { addScore, refreshScore } from './modules/main-functions.js';
+import {
+  refreshBtn, submitScore, inputName, inputScore,
+} from './modules/const.js';
 
 window.addEventListener('load', () => {
-    refreshScore();
-  });
+  refreshScore();
+});
 
 submitScore.addEventListener('click', (e) => {
-    if(inputName.value === '' || inputScore.value === ''){
-        e.preventDefault();
-        inputName.placeholder = 'Field cant be empty';
-        inputScore.placeholder = 'Field cant be empty';
-        
-    }
-    else {
-        addScore();
-    }
+  if (inputName.value === '' || inputScore.value === '') {
+    e.preventDefault();
+    inputName.placeholder = 'Field cant be empty';
+    inputScore.placeholder = 'Field cant be empty';
+  } else {
+    addScore();
+  }
 });
 
 refreshBtn.addEventListener('click', () => {
-    refreshScore();
-})
+  refreshScore();
+});
