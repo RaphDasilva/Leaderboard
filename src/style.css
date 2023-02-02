@@ -2,18 +2,36 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Balsamiq Sans', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 600;
   font-style: normal;
+  color: #fff;
 }
 
 body {
   width: 70%;
   margin: auto;
+  background: linear-gradient(-45deg, #eb6e48, #dd296e, #1ca5d7, #18d9ac);
+  background-size: 400% 400%;
+  animation: gradient 6s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 h1 {
-  margin-left: 100px;
+  text-align: center;
   margin-top: 50px;
   font-size: 40px;
 }
@@ -25,24 +43,35 @@ h1 {
 
 .container {
   display: flex;
-  gap: 200px;
+  justify-content: space-evenly;
 }
 
 .refresh-btn {
   padding: 0 10px;
-  border: 2px solid;
-  box-shadow: 3px 3px black;
+  padding: 0.15rem 1rem;
+  align-self: flex-end;
+  width: 30%;
+  height: 50px;
+  border: 1px solid;
+  background: #dd296e;
+  border-radius: 20px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
 }
 
 .scores {
-  width: 95%;
-  margin-left: 150px;
+  width: 400px;
   margin-top: 20px;
 }
 
 .scores-container {
-  border: 2px #000 solid;
+  border: 2px #fff solid;
   margin: 20px auto;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 ul {
@@ -54,7 +83,8 @@ li {
 }
 
 li:nth-child(odd) {
-  background: rgb(161, 159, 159);
+  background: #dd296e;
+  border-bottom: #fff 1px solid;
 }
 
 .form-title {
@@ -65,23 +95,54 @@ li:nth-child(odd) {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   gap: 10px;
-}
-
-input {
-  border: 2px #000 solid;
-  padding: 5px;
-  width: 100%;
+  width: 400px;
 }
 
 ::placeholder {
-  color: #000;
+  color: #cecccc;
 }
 
 .submit-btn {
   padding: 0.15rem 1rem;
   align-self: flex-end;
-  border: 2px solid;
-  box-shadow: 3px 3px black;
+  width: 50%;
+  height: 50px;
+  border: 1px solid;
+  background: #dd296e;
+  border-radius: 20px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+.submit-btn:hover {
+  border-color: #18d9ac;
+  transition: 0.5s;
+}
+
+input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: 2px solid #fff;
+}
+
+input:focus {
+  border-bottom: 2px solid #111010;
+  transition: 2s;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+  }
 }

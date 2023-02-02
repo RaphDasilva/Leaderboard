@@ -26,11 +26,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Awesome-Books] <a name="about-project"></a>
+# 📖 [Leaderboard] <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**[Awesome-Books]**   is a website that displays scores submitted by different players. It also allows the user to submit their score. All data is preserved as a result of using external Leaderboard API service.
+**[Leaderboard]**   is a website that displays scores submitted by different players. It also allows the user to submit their score. All data is preserved as a result of using external Leaderboard API service.
 
 
 
@@ -86,7 +86,7 @@
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](#)
+- [Live Demo Link](https://raphdasilva.github.io/Leaderboard/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -109,7 +109,7 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-1. Go to the [repository page](https://github.com/RaphDasilva/Awesome-books).
+1. Go to the [repository page](https://github.com/RaphDasilva/Leaderboard).
 2. Press the "Code" button and copy the link.
 3. Clone it using git command `git clone <link>`.
 

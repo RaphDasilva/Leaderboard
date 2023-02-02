@@ -350,7 +350,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: 'Balsamiq Sans', sans-serif;\n  font-weight: 600;\n  font-style: normal;\n}\n\nbody {\n  width: 70%;\n  margin: auto;\n}\n\nh1 {\n  margin-left: 100px;\n  margin-top: 50px;\n  font-size: 40px;\n}\n\n.title {\n  display: flex;\n  justify-content: space-between;\n}\n\n.container {\n  display: flex;\n  gap: 200px;\n}\n\n.refresh-btn {\n  padding: 0 10px;\n  border: 2px solid;\n  box-shadow: 3px 3px black;\n}\n\n.scores {\n  width: 95%;\n  margin-left: 150px;\n  margin-top: 20px;\n}\n\n.scores-container {\n  border: 2px #000 solid;\n  margin: 20px auto;\n}\n\nul {\n  list-style: none;\n}\n\nli {\n  padding: 10px;\n}\n\nli:nth-child(odd) {\n  background: rgb(161, 159, 159);\n}\n\n.form-title {\n  margin-top: 20px;\n}\n\n.form {\n  margin-top: 20px;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  gap: 10px;\n}\n\ninput {\n  border: 2px #000 solid;\n  padding: 5px;\n  width: 100%;\n}\n\n::placeholder {\n  color: #000;\n}\n\n.submit-btn {\n  padding: 0.15rem 1rem;\n  align-self: flex-end;\n  border: 2px solid;\n  box-shadow: 3px 3px black;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: \"Nunito\", sans-serif;\n  font-weight: 600;\n  font-style: normal;\n  color: #fff;\n}\n\nbody {\n  width: 70%;\n  margin: auto;\n  background: linear-gradient(-45deg, #eb6e48, #dd296e, #1ca5d7, #18d9ac);\n  background-size: 400% 400%;\n  animation: gradient 6s ease infinite;\n}\n\n@keyframes gradient {\n  0% {\n    background-position: 0% 50%;\n  }\n\n  50% {\n    background-position: 100% 50%;\n  }\n\n  100% {\n    background-position: 0% 50%;\n  }\n}\n\nh1 {\n  text-align: center;\n  margin-top: 50px;\n  font-size: 40px;\n}\n\n.title {\n  display: flex;\n  justify-content: space-between;\n}\n\n.container {\n  display: flex;\n  justify-content: space-evenly;\n}\n\n.refresh-btn {\n  padding: 0 10px;\n  padding: 0.15rem 1rem;\n  align-self: flex-end;\n  width: 30%;\n  height: 50px;\n  border: 1px solid;\n  background: #dd296e;\n  border-radius: 20px;\n  font-size: 18px;\n  color: #fff;\n  font-weight: 700;\n  cursor: pointer;\n  outline: none;\n}\n\n.scores {\n  width: 400px;\n  margin-top: 20px;\n}\n\n.scores-container {\n  border: 2px #fff solid;\n  margin: 20px auto;\n  border-radius: 10px;\n  padding: 10px;\n}\n\nul {\n  list-style: none;\n}\n\nli {\n  padding: 10px;\n}\n\nli:nth-child(odd) {\n  background: #dd296e;\n  border-bottom: #fff 1px solid;\n}\n\n.form-title {\n  margin-top: 20px;\n}\n\n.form {\n  margin-top: 20px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n  gap: 10px;\n  width: 400px;\n}\n\n::placeholder {\n  color: #cecccc;\n}\n\n.submit-btn {\n  padding: 0.15rem 1rem;\n  align-self: flex-end;\n  width: 50%;\n  height: 50px;\n  border: 1px solid;\n  background: #dd296e;\n  border-radius: 20px;\n  font-size: 18px;\n  color: #fff;\n  font-weight: 700;\n  cursor: pointer;\n  outline: none;\n}\n\n.submit-btn:hover {\n  border-color: #18d9ac;\n  transition: 0.5s;\n}\n\ninput {\n  width: 100%;\n  padding: 0 5px;\n  height: 40px;\n  font-size: 16px;\n  border: none;\n  background: none;\n  outline: none;\n  border-bottom: 2px solid #fff;\n}\n\ninput:focus {\n  border-bottom: 2px solid #111010;\n  transition: 2s;\n}\n\n@media (max-width: 768px) {\n  .container {\n    flex-direction: column;\n    justify-content: center;\n  }\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -485,7 +485,7 @@ const addScore = () => {
 };
 
 const renderScore = () => {
-    _const_js__WEBPACK_IMPORTED_MODULE_0__.gameScoreContainer.innerHTML = '';
+  _const_js__WEBPACK_IMPORTED_MODULE_0__.gameScoreContainer.innerHTML = '';
   scoreArr.forEach((person) => {
     const leader = `<li> ${person.user}: ${person.score}</li>`;
     _const_js__WEBPACK_IMPORTED_MODULE_0__.gameScoreContainer.innerHTML += leader;
@@ -531,18 +531,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-const addApiScore = (user) => {
-        fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/np8G7JdKLR96QcXBTm5K/scores/', {
-          method: 'POST',
-          body: JSON.stringify(user),
-          headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-          },
-        })
-          .then((response) => response.json());
-      };
-      /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addApiScore);
-
+const addApiScore = async (user) => {
+  const response = fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/np8G7JdKLR96QcXBTm5K/scores/', {
+    method: 'POST',
+    body: JSON.stringify(user),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
+  const scoreDataPosted = await response.json();
+  return scoreDataPosted;
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addApiScore);
 
 
 /***/ }),
@@ -554,13 +554,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 const getScore = async () => {
-    const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/np8G7JdKLR96QcXBTm5K/scores/');
-    const results = await response.json();
-    const scoreList = results.result;
-    return scoreList;
-  };
-  
-  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getScore);
+  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/np8G7JdKLR96QcXBTm5K/scores/');
+  const results = await response.json();
+  const scoreList = results.result;
+  return scoreList;
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getScore);
 
 /***/ })
 /******/ 	]);
@@ -641,34 +641,29 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _modules_main_functions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
-/* harmony import */ var _modules_const__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
-
-
-
+/* harmony import */ var _modules_main_functions_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
+/* harmony import */ var _modules_const_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
 
 
 
 
 window.addEventListener('load', () => {
-    (0,_modules_main_functions__WEBPACK_IMPORTED_MODULE_1__.refreshScore)();
-  });
-
-_modules_const__WEBPACK_IMPORTED_MODULE_2__.submitScore.addEventListener('click', (e) => {
-    if(_modules_const__WEBPACK_IMPORTED_MODULE_2__.inputName.value === '' || _modules_const__WEBPACK_IMPORTED_MODULE_2__.inputScore.value === ''){
-        e.preventDefault();
-        _modules_const__WEBPACK_IMPORTED_MODULE_2__.inputName.placeholder = 'Field cant be empty';
-        _modules_const__WEBPACK_IMPORTED_MODULE_2__.inputScore.placeholder = 'Field cant be empty';
-        
-    }
-    else {
-        (0,_modules_main_functions__WEBPACK_IMPORTED_MODULE_1__.addScore)();
-    }
+  (0,_modules_main_functions_js__WEBPACK_IMPORTED_MODULE_1__.refreshScore)();
 });
 
-_modules_const__WEBPACK_IMPORTED_MODULE_2__.refreshBtn.addEventListener('click', () => {
-    (0,_modules_main_functions__WEBPACK_IMPORTED_MODULE_1__.refreshScore)();
-})
+_modules_const_js__WEBPACK_IMPORTED_MODULE_2__.submitScore.addEventListener('click', (e) => {
+  if (_modules_const_js__WEBPACK_IMPORTED_MODULE_2__.inputName.value === '' || _modules_const_js__WEBPACK_IMPORTED_MODULE_2__.inputScore.value === '') {
+    e.preventDefault();
+    _modules_const_js__WEBPACK_IMPORTED_MODULE_2__.inputName.placeholder = 'Field cant be empty';
+    _modules_const_js__WEBPACK_IMPORTED_MODULE_2__.inputScore.placeholder = 'Field cant be empty';
+  } else {
+    (0,_modules_main_functions_js__WEBPACK_IMPORTED_MODULE_1__.addScore)();
+  }
+});
+
+_modules_const_js__WEBPACK_IMPORTED_MODULE_2__.refreshBtn.addEventListener('click', () => {
+  (0,_modules_main_functions_js__WEBPACK_IMPORTED_MODULE_1__.refreshScore)();
+});
 
 })();
 
