@@ -137,7 +137,7 @@ input {
 
 input:focus {
   border-bottom: 2px solid #111010;
-  transition: 2s;
+  transition: 2.05s;
 }
 
 @media (max-width: 768px) {
