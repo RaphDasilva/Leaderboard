@@ -5,13 +5,12 @@
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   font-style: normal;
-  color: #ffffff;
+  color: #fff;
 }
 
 body {
   width: 70%;
   margin: auto;
-  background-color: rgb(255, 255, 255);
   background: linear-gradient(-45deg, #eb6e48, #dd296e, #1ca5d7, #18d9ac);
   background-size: 400% 400%;
   animation: gradient 6s ease infinite;
@@ -21,9 +20,11 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -67,7 +68,7 @@ h1 {
 }
 
 .scores-container {
-  border: 2px #ffffff solid;
+  border: 2px #fff solid;
   margin: 20px auto;
   border-radius: 10px;
   padding: 10px;
@@ -83,7 +84,7 @@ li {
 
 li:nth-child(odd) {
   background: #dd296e;
-  border-bottom: #ffffff 1px solid;
+  border-bottom: #fff 1px solid;
 }
 
 .form-title {
@@ -97,12 +98,6 @@ li:nth-child(odd) {
   justify-content: space-evenly;
   gap: 10px;
   width: 400px;
-}
-
-input {
-  border: 2px #000 solid;
-  padding: 5px;
-  width: 100%;
 }
 
 ::placeholder {
@@ -123,10 +118,12 @@ input {
   cursor: pointer;
   outline: none;
 }
-.submit-btn:hover{
+
+.submit-btn:hover {
   border-color: #18d9ac;
   transition: 0.5s;
 }
+
 input {
   width: 100%;
   padding: 0 5px;
@@ -135,7 +132,7 @@ input {
   border: none;
   background: none;
   outline: none;
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid #fff;
 }
 
 input:focus {
@@ -143,7 +140,7 @@ input:focus {
   transition: 2s;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .container {
     flex-direction: column;
     justify-content: center;
